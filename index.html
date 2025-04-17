@@ -7,22 +7,26 @@
   <title>Automatus - Automate with Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Poppins', sans-serif;
-      background: #f7f9fc;
+      background: #f9fbfd;
       color: #1C2A4D;
+      line-height: 1.6;
     }
     header {
       background: #1C2A4D;
-      color: white;
       padding: 1.5rem 2rem;
+      color: white;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
-    header h1 { margin: 0; }
     nav a {
       color: white;
       margin-left: 1.5rem;
@@ -30,33 +34,58 @@
       font-weight: 600;
     }
     .hero {
-      background: #254075;
+      background: #1C2A4D;
       color: white;
-      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+    }
+    .hero-text {
+      flex: 1;
+      padding-right: 2rem;
+    }
+    .hero-text h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    .hero-img {
+      flex: 1;
       text-align: center;
     }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; }
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
     section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+      padding: 4rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
     h3 {
-      color: #1C2A4D;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .card {
       background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .card img {
+      max-width: 80px;
+      margin-bottom: 1rem;
     }
     footer {
       background: #1C2A4D;
@@ -64,19 +93,12 @@
       text-align: center;
       padding: 2rem;
     }
-    .language-switch {
-      margin-left: auto;
-      display: flex;
-      gap: 1rem;
-    }
-    .language-switch a {
-      color: white;
-      text-decoration: underline;
-      font-size: 0.9rem;
-    }
-    .contact-info {
-      margin-top: 1rem;
-      font-size: 0.95rem;
+    .wave {
+      width: 100%;
+      height: 100px;
+      background: url('https://www.svgrepo.com/show/2046/wave.svg') repeat-x;
+      background-size: cover;
+      transform: rotate(180deg);
     }
   </style>
 </head>
@@ -87,37 +109,44 @@
       <a href="#services">Services</a>
       <a href="#solutions">Solutions</a>
       <a href="#industries">Industries</a>
-      <a href="#about">About Us</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <div class="language-switch">
-        <a href="#">EN</a>
-        <a href="#">FR</a>
-      </div>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Automate with Us</h2>
-    <p>Simplify operations. Amplify impact. We help you work smarter through system integration and local expertise.</p>
+    <div class="hero-text">
+      <h2>Automate with Us</h2>
+      <p>Simplify operations. Amplify impact. We help you work smarter through system integration and local expertise.</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://undraw.co/api/illustrations/undraw_online_information_re_erks.svg" alt="automation illustration">
+    </div>
   </section>
+
+  <div class="wave"></div>
 
   <section id="services">
     <h3>Our Services</h3>
     <div class="grid">
       <div class="card">
-        <strong>Industry-specific SOP Templates</strong>
+        <img src="https://img.icons8.com/color/96/template.png" alt="SOP icon">
+        <h4>Industry-specific SOP Templates</h4>
         <p>Streamline your processes with ready-to-use, proven templates tailored to your sector.</p>
       </div>
       <div class="card">
-        <strong>CRM & Accounting Implementation</strong>
+        <img src="https://img.icons8.com/color/96/crm.png" alt="CRM icon">
+        <h4>CRM & Accounting</h4>
         <p>Deploy CRM and accounting tools quickly with minimal disruption.</p>
       </div>
       <div class="card">
-        <strong>Tax Compliance & Local Support</strong>
+        <img src="https://img.icons8.com/color/96/tax.png" alt="Tax icon">
+        <h4>Tax Compliance & Local Support</h4>
         <p>Stay compliant with local laws and receive ongoing operational support.</p>
       </div>
       <div class="card">
-        <strong>Business Consultation</strong>
+        <img src="https://img.icons8.com/color/96/consultation.png" alt="Consulting icon">
+        <h4>Business Consultation</h4>
         <p>Understand your bottlenecks and scale up smarter with our expert guidance.</p>
       </div>
     </div>
@@ -134,32 +163,29 @@
     <h3>Industries We Serve</h3>
     <div class="grid">
       <div class="card">
-        <strong>Professional Firms & Service Providers</strong>
+        <h4>Professional Firms</h4>
         <p>Enhancing productivity and accuracy in legal, consulting, and other professional fields.</p>
       </div>
       <div class="card">
-        <strong>Retail & Wholesale</strong>
+        <h4>Retail & Wholesale</h4>
         <p>From POS to inventory to reporting—fully integrated for better insights.</p>
       </div>
       <div class="card">
-        <strong>Non-Profit Organizations (NGOs)</strong>
+        <h4>Non-Profit Organizations</h4>
         <p>Reduce admin work and maximize your social impact.</p>
       </div>
     </div>
   </section>
 
   <section id="about">
-    <h3>About Automatus</h3>
+    <h3>About Us</h3>
     <p>We are a dedicated team focused on helping small to mid-sized businesses and non-profits run more efficiently. Our mission is to automate processes that slow you down, and connect the systems that matter most to your operation.</p>
   </section>
 
   <section id="contact">
-    <h3>Contact Us</h3>
-    <p>We’re ready to help. Reach out any time to learn how we can support your business or organization.</p>
-    <div class="contact-info">
-      📧 <a href="mailto:automatus9@gmail.com">automatus9@gmail.com</a><br>
-      📍 Toronto, Canada
-    </div>
+    <h3>Contact</h3>
+    <p>Email us at <a href="mailto:automatus9@gmail.com">automatus9@gmail.com</a></p>
+    <p>Based in Toronto, Canada</p>
   </section>
 
   <footer>
